@@ -1,0 +1,35 @@
+<div class="admin-sidebar">
+  <ul class="am-list admin-sidebar-list">
+    <li><a ui-sref="admin"><span class="am-icon-home"></span> 首页</a></li>
+    <li class="admin-parent">
+      <a class="am-cf" data-am-collapse="{target: '#collapse-web'}"><span class="am-icon-file"></span> 网站管理模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-web">
+        <li><a ui-sref="admin.nav"><span class="am-icon-bug"></span> 导航</a></li>
+        <li><a ui-sref="admin.setting"><span class="am-icon-bug"></span>网站设置</a></li>
+        <li><a ui-sref="admin.friendLink"><span class="am-icon-bug"></span>友情链接</a></li>
+        <li><a ui-sref="admin.singlePage"><span class="am-icon-bug"></span>单页面</a></li>
+        <li><a ui-sref="admin.banner"><span class="am-icon-bug"></span>轮播图</a></li>
+     </ul>
+    </li>
+
+    <li class="admin-parent">
+      <a class="am-cf" data-am-collapse="{target: '#collapse-food'}"><span class="am-icon-file"></span> 美食模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-food">
+        <li><a ui-sref="admin.food"><span class="am-icon-bug"></span> 美食列表</a></li>
+        <li><a ui-sref="admin.foodCate"><span class="am-icon-bug"></span> 美食分类</a></li>
+        <li><a ui-sref="admin.news"><span class="am-icon-bug"></span> 美食新闻</a></li>
+      </ul>
+    </li>
+
+      <li class="admin-parent">
+        <a class="am-cf" data-am-collapse="{target: '#collapse-company'}"><span class="am-icon-file"></span> 店铺模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+        <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-company">
+          <li><a ui-sref="admin.region"><span class="am-icon-bug"></span> 分店地区</a></li>
+          <li><a ui-sref="admin.company"><span class="am-icon-bug"></span> 公司列表</a></li>
+          <li><a ui-sref="admin.shop"><span class="am-icon-bug"></span> 分店信息</a></li>
+        </ul>
+      </li>
+  <!-- <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li> -->
+  </ul>
+
+</div>

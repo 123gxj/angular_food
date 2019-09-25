@@ -1,0 +1,54 @@
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.shop">店面展示</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">北京店</a></li>
+		</ul>
+		<div class="clearfix table-wrap" id="tab-span">
+			<span class="table-item table-active" ng-click="get_region(1)">北京店</span>
+			<span class="table-item" ng-click="get_region(2)">上海店</span>
+			<span class="table-item" ng-click="get_region(3)">厦门店</span>
+			<span class="table-item" ng-click="get_region(4)">广州店</span>
+			<span class="table-item" ng-click="get_region(5)">深圳店</span>
+			<span class="table-item" ng-click="get_region(6)">其他</span>
+			<div class="search clearfix">
+				<input class="inp-txt" type="text" name="address" value="输入关键字" 
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+			</div>
+		</div>
+		
+		<div id="table-div">
+
+			<ul class="am-table am-table-striped am-table-hover table-main table-pic table-show clearfix">
+					<li ng-repeat="item in data"  ui-sref="index.shop.con({id:item.shop_id})" class="shop-wrap shop-right">
+							<span class="shop-pic">
+									<img src="{{item.pic}}" alt="" />
+								</span>
+							<p class="shop-tit">{{item.title}}</p>
+					</li>
+			</ul>
+			<ul class="shop-paging clearfix black-red">
+					<div uib-pagination 
+					total-items="totalItems" 
+					ng-model="currentPage" 
+					max-size="maxSize" 
+					items-per-page="limit"
+					first-text="第一页" 
+					previous-text="上一页" 
+					next-text="下一页" 
+					last-text="最后页" 
+					boundary-links="true" 
+					boundary-link-numbers="true"
+					ng-change="page(currentPage)"
+					></div>
+				<!-- <li><a ui-sref="index.shop.con" class="pag-item">&lt;</a></li>
+				<li><a ui-sref="index.shop.con" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li> -->
+			</ul>
+		</div>

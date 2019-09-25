@@ -1,0 +1,16 @@
+<div class="clearfix nav">
+    <a class="logo" ui-sref="index"></a>
+    <ul class="clearfix nav-wrap" ng-repeat="item in nav">
+        <!-- <li><a class="nav-item nav-active" ui-sref="index">首页</a></li> -->
+        <li class="nav-li"><a class="nav-item bg-change" ui-sref-active='nav-active' ui-sref="{{item.link}}">{{item.title}} </a></li>
+    </ul>
+    <script type="text/javascript">
+
+    // $(".nav-item").on("click", function(){
+    //      console.log(this)
+    //     $(this).parent("li").siblings().children().removeClass("nav-active");
+
+    // });
+
+</script>    
+</div>

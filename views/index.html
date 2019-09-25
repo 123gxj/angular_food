@@ -1,0 +1,61 @@
+
+<div id="content">
+	<div class="new-wrap">
+		<p class="newfood-tit">新品推荐</p>
+		<div class="newfood-box clearfix" id="newfood-table">
+				<!-- ng-repeat="item in food" -->
+			<ul class="newfood-wrap clearfix newfood-show">
+				<li ng-repeat="item in food" class="newfood-item newfood-right newfood-li" style="background: url({{item.pic}}) center no-repeat;
+				position: relative;float: left;">
+					<a ui-sref="index.meishi.con({id : item.food_id})" class="newfood-p">{{item.title}}</a>
+				</li>
+
+			</ul>
+			<ul class="newfood-wrap clearfix">
+					<li ng-repeat="item in food" class="newfood-item newfood-right newfood-li" style="background: url({{item.pic}}) center no-repeat;
+					position: relative;float: left;">
+						<a ui-sref="index.meishi.con({id : item.food_id})" class="newfood-p">{{item.title}}</a>
+					</li>
+			</ul>
+			<ul class="newfood-wrap clearfix">
+					<li ng-repeat="item in food" class="newfood-item newfood-right newfood-li" style="background: url({{item.pic}}) center no-repeat;
+					position: relative;float: left;">
+						<a ui-sref="index.meishi.con({id : item.food_id})" class="newfood-p">{{item.title}}</a>
+					</li>
+			</ul>
+		</div>
+		<div class="clearfix" id="newfood-span">
+			<span style="background: url('asset/home/img/icon-2.png');"></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<div class="company-wrap">
+		<p class="company-tit">{{singlePage.title}}</p>
+		<dl class="clearfix company-dl">
+			<dt class="company-dt">
+				<!-- {{singlePage.pic}} -->
+				<img src="asset/home/img/pic1.jpg"/>
+			</dt>
+			<dd class="company-dd" ng-bind-html="singlePage.content">
+				
+			</dd>
+		</dl>
+	</div>
+	<div class="news-wrap">
+		<p class="news-tit">新闻资讯</p>
+		<dl class="clearfix news-dl">
+			<dt class="news-dt">
+				<img src="asset/home/img/pic2.jpg"/>
+			</dt>
+			<dd class="news-dd">
+				<a ui-sref="index.news.con({id:item.news_id})" class="news-link clearfix"  ng-repeat="item in news">
+					<p class="link-tit">{{item.title}}</p>
+					<p class="link-time">{{item.create_time*1000|date: "yyyy-MM-dd"}}</p>
+				</a>
+
+			</dd>
+		</dl>
+	</div>
+
+</div>

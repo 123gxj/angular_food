@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="asset/home/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="asset/home/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	</head>
+	<script src="./asset/home/js/jquery-1.11.0.js"></script>
+	<body ng-app="food">
+			
+		<div ui-view="nav"></div>
+		
+		<div ui-view="banner"></div>
+		<div ui-view="content"></div>
+		<div ui-view="footer"></div>
+
+	</body>
+	<script src="../lib/bower_components/angular/angular.js"></script>
+	<script src="../lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="home-app.js"></script>
+    <script src="routers/homeRouter.js"></script>
+	 
+	<script src="./service/bannerFactory.js"></script>
+	<script src="./service/companyFactory.js"></script>
+	<script src="./service/foodCateFactory.js"></script>
+	<script src="./service/foodFactory.js"></script>
+	<script src="./service/friendLinkFactory.js"></script>
+	<script src="./service/navFactory.js"></script>
+	<script src="./service/newsFactory.js"></script>
+	<script src="./service/regionFactory.js"></script>
+	<script src="./service/settingFactory.js"></script>
+	<script src="./service/shopFactory.js"></script>
+	<script src="./service/singlePageFactory .js"></script>
+
+	<script src="./controllers/home/indexController.js"></script>
+	<script src="./controllers/home/pageController.js"></script>
+</html>
+
+<script type="text/javascript">
+ 
+	//美食系列当前项切换
+	$(".table-item").click(function(){
+				$(this).siblings().removeClass("table-active");
+				$(this).addClass("table-active");
+			});
+</script>

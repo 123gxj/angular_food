@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Amaze后台管理系统模板HTML首页 - 源码之家</title>
+  <meta name="description" content="这是一个 index 页面">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../asset/admin/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../asset/admin/i/app-icon72x72@2x.png">
+  <link rel="stylesheet" href="../../lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="../asset/admin/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../asset/admin/css/admin.css">
+</head>
+<body ng-app="food_admin">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<div ui-view="header"></div>
+<div class="am-cf admin-main">
+  <div ui-view="sidebar"></div>
+  <div ui-view="content"></div>
+</div>
+ <div ui-view="footer"></div>
+</body>
+
+<!--[if lt IE 9]>
+<script src="js/jquery1.11.1.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/polyfill/rem.min.js"></script>
+<script src="js/polyfill/respond.min.js"></script>
+<script src="js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="../asset/admin/js/jquery.min.js"></script>
+  <script src="../asset/admin/js/amazeui.min.js"></script>
+  <!-- <![endif] -->
+   <!-- 编辑器插件 -->
+   
+  <!-- 引入angular及入口文件 -->
+<script src="../../lib/bower_components/angular/angular.min.js"></script>
+<script src="../admin-app.js"></script>
+<!-- 引入依赖文件：文件插件 -->
+<script src="../../lib/bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+<script src="../../lib/bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+<!-- 引入依赖文件：ui/路由 -->
+<script src="../../lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../../lib/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<!-- 链接服务 -->
+<script src="../service/formFactory.js"></script>
+<script src="../service/foodFactory.js"></script>
+<script src="../service/foodCateFactory.js"></script>
+<script src="../service/regionFactory.js"></script>
+<script src="../service/navFactory.js"></script>
+<script src="../service/settingFactory.js"></script>
+<script src="../service/companyFactory.js"></script>
+<script src="../service/newsFactory.js"></script>
+<script src="../service/shopFactory.js"></script>
+<script src="../service/friendLinkFactory.js"></script>
+<script src="../service/singlePageFactory .js"></script>
+<script src="../service/bannerFactory.js"></script>
+<!-- 链接路由文件及控制器文件 -->
+<script src="../routers/adminRouter.js"></script>
+<script src="../controllers/admin/foodController.js"></script>
+<script src="../controllers/admin/foodCateController.js"></script>
+<script src="../controllers/admin/regionController.js"></script>
+<script src="../controllers/admin/navController.js"></script>
+<script src="../controllers/admin/settingController.js"></script>
+<script src="../controllers/admin/companyController.js"></script>
+<script src="../controllers/admin/newsController.js"></script>
+<script src="../controllers/admin/shopController.js"></script>
+<script src="../controllers/admin/friendLinkController.js"></script>
+<script src="../controllers/admin/singlePageController.js"></script>
+<script src="../controllers/admin/bannerController.js"></script>
+<!-- <script src=""></script> -->
+</html>

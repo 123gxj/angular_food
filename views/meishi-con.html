@@ -1,0 +1,18 @@
+
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a href="index.html">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="meishi.html">美食系列</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">菲力黑椒牛排</a></li>
+		</ul>
+		<div class="mei-wrap">
+			<p class="mei-tit">{{food.title}}</p>
+			<div class="mei-pic">
+				<img src="{{food.pic}}" style="margin: 0 auto;display: block;"/>
+			</div>
+			<div class="mei-txt" ng-bind-html="food.content">
+				
+			</div>
+			<a href="meishi.html" class="meishi-icon">返回列表页</a>
+		</div>

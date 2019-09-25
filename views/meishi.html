@@ -1,0 +1,51 @@
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.meishi">美食系列</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">全部菜品</a></li>
+		</ul>
+		<div class="clearfix table-wrap" id="tab-span">
+			<span class="table-item table-active"ng-click="get_foodCate('all')">全部菜品</span>
+			<span class="table-item" ng-click="get_foodCate('经典牛排')">经典牛排</span>
+			<span class="table-item" ng-click="get_foodCate('意面/烩饭')">意面/烩饭</span>
+			<span class="table-item" ng-click="get_foodCate('风味披萨')">风味披萨</span>
+			<span class="table-item" ng-click="get_foodCate('甜品小食')">甜品小食</span>
+			<span class="table-item" ng-click="get_foodCate('酒水饮料')">酒水饮料</span>
+			<span class="table-item" ng-click="get_foodCate('其他')">其他</span>
+			<div class="search clearfix">
+				<input class="inp-txt" type="text" name="address" value="输入关键字" 
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+			</div>
+		</div>
+		<div id="table-div">
+		
+          <ul class="am-table am-table-striped am-table-hover table-main table-pic table-show clearfix">
+            <li ng-repeat="item in data"  ui-sref="index.meishi.con({id : item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+							<img src="{{item.pic}}" alt="" />
+						</span>
+						<h2 class="ms-tit">{{item.title}}</h2>
+						<p class="ms-txt">{{item.price}}</p>
+			</li>
+		  </ul>
+			<ul class="ms-paging clearfix">
+					<div uib-pagination 
+					total-items="totalItems" 
+					ng-model="currentPage" 
+					max-size="maxSize" 
+					items-per-page="limit"
+					first-text="第一页" 
+					previous-text="上一页" 
+					next-text="下一页" 
+					last-text="最后页" 
+					boundary-links="true" 
+					boundary-link-numbers="true"
+					ng-change="page(currentPage)"
+					></div>
+
+			</ul>
+		</div>
